@@ -14,6 +14,9 @@ def is_eng(haha: str) -> bool:
 
 
 def is_haha(haha: str) -> bool:
+    if not haha:
+        return False
+
     haha = rusificate_haha(haha).casefold()
 
     ha_count = len([c for c in haha if c in ('х', 'а')])

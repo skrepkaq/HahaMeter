@@ -17,6 +17,7 @@ def test_eng():
 
 
 def test_is_haha():
+    assert is_haha('') is False
     assert is_haha('хАХа') is True
     assert is_haha('[f{A') is True
     assert is_haha('gптн') is False
