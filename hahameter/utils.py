@@ -19,9 +19,12 @@ def is_haha(haha: str) -> bool:
 
     haha = rusificate_haha(haha).casefold()
 
-    ha_count = len([c for c in haha if c in ('х', 'а')])
-    ha_ratio = ha_count / len(haha)
+    h_count = len([c for c in haha if c == 'х'])
+    h_ratio = h_count / len(haha)
 
-    if ha_ratio >= 0.5 or ha_count >= 10:
+    a_count = len([c for c in haha if c == 'а'])
+    a_ratio = a_count / len(haha)
+
+    if h_ratio > 0.25 and a_ratio > 0.25 and len(haha) > 3:
         return True
     return False

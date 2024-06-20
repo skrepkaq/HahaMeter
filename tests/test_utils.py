@@ -19,9 +19,9 @@ def test_eng():
 def test_is_haha():
     assert is_haha('') is False
     assert is_haha('хАХа') is True
-    assert is_haha('[f{A') is True
+    assert is_haha('[f{А') is True
     assert is_haha('gптн') is False
     assert is_haha('хаха' + 'п' * 6) is False
-    assert is_haha('хахах' + 'н' * 5) is True
-    assert is_haha('ха' * 4 + 'x' * 99) is False
-    assert is_haha('ха' * 5 + 'g' * 99) is True
+    assert is_haha('хахаха' + 'н' * 5) is True
+    assert is_haha('х' * 25 + 'а' * 25 + 'x' * 50) is False
+    assert is_haha('х' * 26 + 'а' * 26 + 'о' * 48) is True
