@@ -23,5 +23,5 @@ def test_is_haha():
     assert is_haha('gптн') is False
     assert is_haha('хаха' + 'п' * 6) is False
     assert is_haha('хахаха' + 'н' * 5) is True
-    assert is_haha('х' * 25 + 'а' * 25 + 'x' * 50) is False
-    assert is_haha('х' * 26 + 'а' * 26 + 'о' * 48) is True
+    assert is_haha('х' * 20 + 'а' * 20 + 'x' * 60) is False
+    assert is_haha('х' * 21 + 'а' * 21 + 'о' * 58) is True

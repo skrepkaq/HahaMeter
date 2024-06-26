@@ -25,6 +25,6 @@ def is_haha(haha: str) -> bool:
     a_count = len([c for c in haha if c == 'а'])
     a_ratio = a_count / len(haha)
 
-    if h_ratio > 0.25 and a_ratio > 0.25 and len(haha) > 3:
+    if h_ratio > 0.2 and a_ratio > 0.2 and len(haha) > 3:
         return True
     return False
