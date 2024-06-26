@@ -20,7 +20,7 @@ def caps(haha: str) -> float:
     haha = utils.rusificate_haha(haha)
     caps_count = len([c for c in haha if c.isupper()])
     caps_ratio = caps_count / len(haha)
-    if caps_ratio < 0.2:
+    if caps_ratio < 0.2 or caps_count < 2:
         return 0
     elif caps_ratio < 0.6:
         return caps_ratio
